@@ -5,10 +5,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load the LSTM Model
-model = load_model('lstm_rnn/next_word_lstm.h5')
+model = load_model('next_word_lstm.h5')
 
 # Load the tokenizer
-with open('lstm_rnn/tokenizer.pickle', 'rb') as handle:
+with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 # Function to predict the next word
@@ -102,7 +102,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Input Section ---
-#st.markdown("<div class='section'>", unsafe_allow_html=True)
 
 # Custom label in black
 st.markdown("<span style='font-weight:600; font-size:16px; color:#000000;'>🖊️ Enter a sequence of words</span>", unsafe_allow_html=True)
